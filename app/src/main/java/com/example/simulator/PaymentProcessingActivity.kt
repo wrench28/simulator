@@ -7,13 +7,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.simulator.databinding.ActivityPaymentProcessingBinding
 
+
+import com.example.simulator.databinding.ActivityPaymentProcessingBinding
+//
 
 class PaymentProcessingActivity : AppCompatActivity() {
     private var binding: ActivityPaymentProcessingBinding? = null
     private lateinit var amt: String
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
         super.onCreate(savedInstanceState)
         binding = ActivityPaymentProcessingBinding.inflate(layoutInflater)
         setContentView(binding?.root)
