@@ -20,11 +20,11 @@ class PrintReciept : AppCompatActivity() {
         binding?.btnMerchantCopy?.setOnClickListener {
             move()
         }
-        Log.d("D",amt.toString())
-        binding?.price?.text = amt.toString()
+        binding?.price?.text = "Rs "+ amt.toString()
+        binding?.mAddress?.text = "Del pero heights, Los santos"
     }
-    fun move() {
-        val animation1= loadAnimation(this,com.example.simulator.R.anim.move)
+    private fun move() {
+        val animation1= loadAnimation(this, R.anim.move)
         binding?.cardView?.startAnimation(animation1)
     }
     private fun loadData(): String? {
@@ -38,5 +38,9 @@ class PrintReciept : AppCompatActivity() {
         val intent = Intent(this,MainActivity::class.java)
         startActivity(intent)
         finish()
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
     }
 }

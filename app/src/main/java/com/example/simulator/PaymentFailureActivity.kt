@@ -1,13 +1,12 @@
 package com.example.simulator
 
 import android.app.AlertDialog
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
-import com.example.simulator.databinding.ActivityMainBinding
 import com.example.simulator.databinding.ActivityPaymentFailureBinding
 
 class PaymentFailureActivity : AppCompatActivity() {
@@ -17,10 +16,9 @@ class PaymentFailureActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPaymentFailureBinding.inflate(layoutInflater)
         setContentView(binding?.root)
-        amt = intent.getStringExtra("Amount").toString()
+        amt = loadData().toString()
         binding?.retry?.setOnClickListener {
             val intent = Intent(this,MainActivity::class.java)
-            intent.putExtra("Amount",amt)
             startActivity(intent)
             finish()
         }
@@ -28,6 +26,14 @@ class PaymentFailureActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         alertBox()
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        binding = null
+    }
+    private fun loadData(): String? {
+        val sharedRef: SharedPreferences = getSharedPreferences("sharedprefs", Context.MODE_PRIVATE)
+        return sharedRef.getString("PrintAmt", null)
     }
     private fun alertBox()
     {
@@ -40,7 +46,6 @@ class PaymentFailureActivity : AppCompatActivity() {
     }
     private val positive = { _: DialogInterface, _: Int ->
         val intent = Intent(this,MainActivity::class.java)
-        intent.putExtra("Amount",amt)
         startActivity(intent)
         finish()
     }
