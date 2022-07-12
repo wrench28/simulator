@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PinEntry">
+
+    <TextView
+        android:id="@+id/txtVPayableAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:text="@string/payable_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVAmt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:background="@drawable/amt_bg"
+        android:text="@string/txtVamt"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVPayableAmt" />
+    <TextView
+        android:id="@+id/PayValue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue1"
+        android:layout_marginTop="@dimen/marginTPayValue1"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVAmt" />
+    <TextView
+        android:id="@+id/PayValue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue2"
+        android:layout_marginTop="@dimen/marginTPayValue2"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/PayValueTxtSize"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PayValue1"
+        app:layout_constraintTop_toBottomOf="@+id/txtVAmt" />
+
+    <TextView
+        android:id="@+id/PayValue4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue4"
+        android:layout_marginTop="@dimen/marginTPayValue4"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue4"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue1" />
+
+    <TextView
+        android:id="@+id/PayValue6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue6"
+        android:layout_marginTop="@dimen/marginTPayValue6"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue6"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PayValue5"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue3" />
+
+    <TextView
+        android:id="@+id/PayValue7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue7"
+        android:layout_marginTop="@dimen/marginTPayValue7"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue7"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue4" />
+
+    <TextView
+        android:id="@+id/PayValue3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue3"
+        android:layout_marginTop="@dimen/marginTPayValue3"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PayValue2"
+        app:layout_constraintTop_toBottomOf="@+id/txtVAmt" />
+
+    <TextView
+        android:id="@+id/PayValue5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue5"
+        android:layout_marginTop="@dimen/marginTPayValue5"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PayValue4"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue2" />
+
+    <TextView
+        android:id="@+id/PayValue8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue8"
+        android:layout_marginTop="@dimen/marginTPayValue8"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PayValue7"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue5" />
+
+    <TextView
+        android:id="@+id/PayValue9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue9"
+        android:layout_marginTop="@dimen/marginTPayValue9"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue9"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PayValue8"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue6" />
+    <TextView
+        android:id="@+id/PayValue00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginTPayValue00"
+        android:layout_marginStart="@dimen/marginSPayValue00"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue00"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/PayValue0"
+        app:layout_constraintEnd_toEndOf="@+id/PayValue7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue7" />
+
+    <TextView
+        android:id="@+id/PayValue0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/marginSPayValue0"
+        android:layout_marginTop="@dimen/marginTPayValue0"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PayValue00"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue8" />
+
+    <Button
+        android:id="@+id/EnterBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/pay_btn"
+        android:text="@string/EnterBtn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue0" />
+
+    <TextView
+        android:id="@+id/CancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/cancelBtn"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/PayBackSpace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/marginSPayValueBackSpace"
+        android:layout_marginTop="@dimen/marginTPayValueBackSpace"
+        android:paddingHorizontal="10dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/PayValue0"
+        app:layout_constraintEnd_toEndOf="@+id/PayValue9"
+        app:layout_constraintStart_toEndOf="@+id/PayValue0"
+        app:layout_constraintTop_toBottomOf="@+id/PayValue9"
+        app:layout_constraintVertical_bias="0.655"
+        app:srcCompat="@drawable/input_delete"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/backspace" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

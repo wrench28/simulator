@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="PayValueTxtSize">30sp</dimen>
+    <dimen name="paddingHPayValue">20dp</dimen>
+    <dimen name="paddingVPayValue">20dp</dimen>
+    <dimen name="sizePayValue">30sp</dimen>
+    <dimen name="marginTPayValue1">60dp</dimen>
+    <dimen name="marginSPayValue1">72dp</dimen>
+    <dimen name="marginTPayValue2">60dp</dimen>
+    <dimen name="marginSPayValue2">44dp</dimen>
+    <dimen name="marginTPayValue3">60dp</dimen>
+    <dimen name="marginSPayValue3">40dp</dimen>
+    <dimen name="marginTPayValue4">32dp</dimen>
+    <dimen name="marginSPayValue4">72dp</dimen>
+    <dimen name="marginTPayValue5">32dp</dimen>
+    <dimen name="marginSPayValue5">44dp</dimen>
+    <dimen name="marginTPayValue6">32dp</dimen>
+    <dimen name="marginSPayValue6">40dp</dimen>
+    <dimen name="marginTPayValue7">24dp</dimen>
+    <dimen name="marginSPayValue7">72dp</dimen>
+    <dimen name="marginTPayValue8">24dp</dimen>
+    <dimen name="marginSPayValue8">44dp</dimen>
+    <dimen name="marginTPayValue9">24dp</dimen>
+    <dimen name="marginSPayValue9">44dp</dimen>
+    <dimen name="marginTPayValue0">28dp</dimen>
+    <dimen name="marginSPayValue0">44dp</dimen>
+    <dimen name="marginTPayValue00">28dp</dimen>
+    <dimen name="marginSPayValue00">72dp</dimen>
+    <dimen name="marginTPayValueBackSpace">28dp</dimen>
+    <dimen name="marginSPayValueBackSpace">44dp</dimen>
+    <dimen name="marginTPayValue">60dp</dimen>
+    <dimen name="marginSPayValue">72dp</dimen>
+
+</resources>

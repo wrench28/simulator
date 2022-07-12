@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PinEntry">
+
+    <TextView
+        android:id="@+id/txtVPayableAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="92dp"
+        android:text="@string/payable_amount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtVpin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/amt_bg"
+        android:gravity="center"
+        android:hint="@string/enter_pin"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVPayableAmt" />
+
+    <TextView
+        android:id="@+id/PinValue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue2"
+        android:textColor="@color/black"
+        android:textSize="@dimen/PayValueTxtSize"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PinValue1"
+        app:layout_constraintTop_toBottomOf="@+id/txtVpin" />
+
+    <TextView
+        android:id="@+id/PinValue3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue3"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PinValue2"
+        app:layout_constraintTop_toBottomOf="@+id/txtVpin" />
+
+    <TextView
+        android:id="@+id/PinValue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue1"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVpin" />
+
+    <TextView
+        android:id="@+id/PinValue0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue0"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue8" />
+
+    <TextView
+        android:id="@+id/PinValue5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue5"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PinValue4"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue2" />
+
+    <TextView
+        android:id="@+id/PinValue8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue8"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PinValue7"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue5" />
+
+    <TextView
+        android:id="@+id/PinValue9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue9"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PinValue8"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue6" />
+
+    <TextView
+        android:id="@+id/PinValue6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue6"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/PinValue5"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue3" />
+
+    <TextView
+        android:id="@+id/PinValue7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue7"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue4" />
+
+    <ImageButton
+        android:id="@+id/PinBackSpace"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/marginSPayValueBackSpace"
+        android:layout_marginTop="@dimen/marginTPayValueBackSpace"
+        android:adjustViewBounds="true"
+        android:background="#00FFFFFF"
+        android:contentDescription="@string/backspace"
+        android:paddingHorizontal="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/PinValue0"
+        app:layout_constraintEnd_toEndOf="@+id/PinValue9"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/PinValue0"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue9"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/input_delete" />
+
+    <TextView
+        android:id="@+id/PinValue4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="28dp"
+        android:paddingHorizontal="@dimen/paddingHPayValue"
+        android:paddingVertical="@dimen/paddingVPayValue"
+        android:text="@string/PayValue4"
+        android:textColor="@color/black"
+        android:textSize="@dimen/sizePayValue"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue1" />
+
+    <Button
+        android:id="@+id/PayBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/pay_btn"
+        android:text="@string/payBtn"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PinValue0" />
+
+    <TextView
+        android:id="@+id/CancelBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="20dp"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="10dp"
+        android:text="@string/cancelBtn"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
