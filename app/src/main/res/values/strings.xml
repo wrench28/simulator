@@ -29,7 +29,7 @@
     <string name="EnterBtn">Enter</string>
     <string name="cancelBtn">Cancel</string>
     <string name="payable_amount">Payable Amount :</string>
-    <string name="txtVamt">Rs. 0.00</string>
+    <string name="txtVamt">Rs 0.00</string>
     <string name="backspace">BackSpace</string>
     <string name="payBtn">Pay</string>
     <string name="enter_pin">Enter Pin</string>
