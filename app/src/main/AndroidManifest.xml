@@ -16,6 +16,10 @@
         android:theme="@style/Theme.Simulator"
         tools:targetApi="31">
         <activity
+            android:name=".EntryPage"
+            android:exported="true" >
+        </activity>
+        <activity
             android:name=".PrintReciept"
             android:exported="false" />
         <activity

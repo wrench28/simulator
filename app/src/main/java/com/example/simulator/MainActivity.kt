@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
             }
             if(arrAmt.isNotEmpty())
             {
-                val intent = Intent(this,PinEntry::class.java)
+                val intent = Intent(this,EntryPage::class.java)
                 saveData()
                 startActivity(intent)
                 finish()
