@@ -138,7 +138,7 @@ class PinEntry : AppCompatActivity() {
     {
         val alert = AlertDialog.Builder(this)
         alert.setTitle("Alert")
-        alert.setMessage("Did not recieve PIN")
+        alert.setMessage("Time out")
         alert.setPositiveButton("Retry", DialogInterface.OnClickListener(function = positiveTimer))
         alert.setNegativeButton("Cancel",DialogInterface.OnClickListener(function = negativeTimer))
         alert.show()
