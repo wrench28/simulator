@@ -40,9 +40,6 @@ class PrintReciept : AppCompatActivity() {
         binding?.btnBothCopy?.setOnClickListener {
             binding?.msg4?.text = "****Merchant copy****\nTHANKS ... VISIT AGAIN"
             moveUp()
-//            Timer().schedule(2900) {
-//
-//            }
             Handler(Looper.getMainLooper()).postDelayed({
                 binding?.msg4?.text = "****Customer copy****\nTHANKS ... VISIT AGAIN"
                 moveDownUp()
@@ -92,7 +89,7 @@ class PrintReciept : AppCompatActivity() {
     private fun moveUL() {
         moveUp()
         Timer().schedule(3000) {
-            moveRight()
+            moveDownUp()
         }
     }
     private fun moveUp() {
