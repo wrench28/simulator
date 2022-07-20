@@ -24,7 +24,7 @@ class PrintReciept : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding?.root)
         val df = SimpleDateFormat("dd-MM-yyyy")
-        val tf = SimpleDateFormat("HH:MM:SS")
+        val tf = SimpleDateFormat("HH:mm:ss")
         val currentDate = df.format(Date())
         val currentTime = tf.format(Date())
         loadData()
