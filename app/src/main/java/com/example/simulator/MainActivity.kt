@@ -92,6 +92,11 @@ class MainActivity : AppCompatActivity() {
                 numlog()
             }
         }
+        binding?.PayBackSpace?.setOnLongClickListener {
+            arrAmt =  ""
+            binding?.txtVAmt?.text = "Rs 0.00"
+            true
+        }
         binding?.CancelBtn?.setOnClickListener {
             alertBox()
         }
