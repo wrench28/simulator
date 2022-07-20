@@ -177,6 +177,8 @@ class MainActivity : AppCompatActivity() {
         alert.show()
     }
     private val positive = { _: DialogInterface, _: Int ->
+        val sharedrefs: SharedPreferences = getSharedPreferences("sharedprefs", MODE_PRIVATE)
+        sharedrefs.edit().clear().commit()
         finishAffinity()
     }
     private val negative = { dialog: DialogInterface, _: Int ->

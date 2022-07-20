@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="13dp"
         android:paddingHorizontal="@dimen/paddingHPayValue"
         android:paddingVertical="@dimen/paddingVPayValue"
         android:text="@string/PayValue2"
@@ -50,14 +50,14 @@
         android:textSize="@dimen/PayValueTxtSize"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/PinValue1"
-        app:layout_constraintTop_toBottomOf="@+id/txtVpin" />
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
 
     <TextView
         android:id="@+id/PinValue3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="13dp"
         android:paddingHorizontal="@dimen/paddingHPayValue"
         android:paddingVertical="@dimen/paddingVPayValue"
         android:text="@string/PayValue3"
@@ -65,14 +65,14 @@
         android:textSize="@dimen/sizePayValue"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/PinValue2"
-        app:layout_constraintTop_toBottomOf="@+id/txtVpin" />
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
 
     <TextView
         android:id="@+id/PinValue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="13dp"
         android:paddingHorizontal="@dimen/paddingHPayValue"
         android:paddingVertical="@dimen/paddingVPayValue"
         android:text="@string/PayValue1"
@@ -80,7 +80,7 @@
         android:textSize="@dimen/sizePayValue"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtVpin" />
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
 
     <TextView
         android:id="@+id/PinValue0"
@@ -236,6 +236,16 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/time_left"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVpin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

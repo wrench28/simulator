@@ -1,5 +1,6 @@
 package com.example.simulator
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.content.DialogInterface
@@ -7,6 +8,8 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
+import android.util.Log
 import android.widget.Toast
 import com.example.simulator.databinding.ActivityPinEntryBinding
 
@@ -18,6 +21,7 @@ class PinEntry : AppCompatActivity() {
         binding = ActivityPinEntryBinding.inflate(layoutInflater)
         setContentView(binding?.root)
         val amt = loadData()
+        timer.start()
         binding?.txtVPayableAmt?.text = binding?.txtVPayableAmt?.text.toString() + " Rs " + amt
         binding?.PinValue1?.setOnClickListener {
             pin += "1"
@@ -129,6 +133,36 @@ class PinEntry : AppCompatActivity() {
     }
     private val negative = { dialog: DialogInterface, _: Int ->
         dialog.dismiss()
+    }
+    private fun alertBoxTimer()
+    {
+        val alert = AlertDialog.Builder(this)
+        alert.setTitle("Alert")
+        alert.setMessage("Did not recieve PIN")
+        alert.setPositiveButton("Retry", DialogInterface.OnClickListener(function = positiveTimer))
+        alert.setNegativeButton("Cancel",DialogInterface.OnClickListener(function = negativeTimer))
+        alert.show()
+    }
+    private val positiveTimer = { _: DialogInterface, _: Int ->
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+        finish()
+    }
+    private val negativeTimer = { _: DialogInterface, _: Int ->
+        val intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
+        val sharedrefs: SharedPreferences = getSharedPreferences("sharedprefs", MODE_PRIVATE)
+        sharedrefs.edit().clear().commit()
+        finish()
+    }
+    private val timer = object: CountDownTimer(60000, 1000) {
+        @SuppressLint("SetTextI18n")
+        override fun onTick(millisUntilFinished: Long) {
+            binding?.timer?.text = "Time Left: " + (millisUntilFinished/1000)
+        }
+        override fun onFinish() {
+            alertBoxTimer()
+        }
     }
     override fun onDestroy() {
         super.onDestroy()
