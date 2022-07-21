@@ -10,5 +10,4 @@
         android:repeatCount="infinite"
         android:repeatMode="reverse"
         />
-
 </set>

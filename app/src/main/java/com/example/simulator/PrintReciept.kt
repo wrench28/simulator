@@ -18,7 +18,7 @@ import kotlin.concurrent.schedule
 
 class PrintReciept : AppCompatActivity() {
     private var binding: ActivityPrintRecieptBinding? = null
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("SetTextI18n", "SimpleDateFormat")
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityPrintRecieptBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
@@ -27,15 +27,15 @@ class PrintReciept : AppCompatActivity() {
         val tf = SimpleDateFormat("HH:mm:ss")
         val currentDate = df.format(Date())
         val currentTime = tf.format(Date())
-        loadData()
-        val amt: String? = loadData()
+        val sharedRef: SharedPreferences = getSharedPreferences("sharedprefs", Context.MODE_PRIVATE)
+        val amt: String? =  sharedRef.getString("PrintAmt", null)
+        val mode: String? = sharedRef.getString("mode", null)
         binding?.btnMerchantCopy?.setOnClickListener {
             binding?.msg4?.text = "****Merchant copy****\nTHANKS ... VISIT AGAIN"
             moveUp()
             Timer().schedule(2900) {
                 moveRight()
             }
-
         }
         binding?.btnBothCopy?.setOnClickListener {
             binding?.msg4?.text = "****Merchant copy****\nTHANKS ... VISIT AGAIN"
@@ -67,7 +67,7 @@ class PrintReciept : AppCompatActivity() {
         binding?.cardNumber?.text = "Card Number: **** **** **** 4321"
         binding?.cardType?.text = "CARD TYPE: VISA"
         binding?.authCode?.text = "AUTH CODE: 000001"
-        binding?.entryMode?.text = "MODE: NFC"
+        binding?.entryMode?.text = "MODE: $mode"
         binding?.RRN?.text = "RRN: 000000123456"
 
     }
@@ -108,11 +108,6 @@ class PrintReciept : AppCompatActivity() {
         val animation1 = loadAnimation(this, R.anim.move_downup)
         binding?.cardView?.startAnimation(animation1)
     }
-    private fun loadData(): String? {
-        val sharedRef: SharedPreferences = getSharedPreferences("sharedprefs", Context.MODE_PRIVATE)
-        return sharedRef.getString("PrintAmt", null)
-    }
-
     override fun onBackPressed() {
         val sharedrefs: SharedPreferences = getSharedPreferences("sharedprefs", MODE_PRIVATE)
         sharedrefs.edit().clear().commit()
